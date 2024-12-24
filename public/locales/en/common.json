@@ -1,0 +1,13 @@
+{
+  "addressDetails": "Address Details",
+  "addressDetailsDesc": "Please provide your address information",
+  "streetAddress": "Street Address",
+  "city": "City",
+  "state": "State",
+  "zipCode": "ZIP Code",
+  "zipCodeError": "ZIP code must be exactly 6 digits",
+  "previous": "Previous",
+  "nextStep": "Next Step",
+  "submit": "Submit",
+  "review": "Review"
+}
