@@ -34,56 +34,64 @@ export function PersonalInfo() {
         <div className="grid grid-cols-2 gap-4">
           <div className="space-y-2">
             <Label htmlFor="firstName">First Name</Label>
-            <Input
-              id="firstName"
-              value={formData.firstName}
-              onChange={(e) => setFormData({ firstName: e.target.value })}
-              error={errors.firstName}
-            />
-            {errors.firstName && (
-              <p className="text-sm text-destructive">{errors.firstName}</p>
-            )}
+            <div>
+              <Input
+                id="firstName"
+                value={formData.firstName}
+                onChange={(e) => setFormData({ firstName: e.target.value })}
+                className={errors.firstName ? "border-red-500" : ""}
+              />
+              {errors.firstName && (
+                <p className="text-sm text-red-500">{errors.firstName}</p>
+              )}
+            </div>
           </div>
           <div className="space-y-2">
             <Label htmlFor="lastName">Last Name</Label>
-            <Input
-              id="lastName"
-              value={formData.lastName}
-              onChange={(e) => setFormData({ lastName: e.target.value })}
-              error={errors.lastName}
-            />
-            {errors.lastName && (
-              <p className="text-sm text-destructive">{errors.lastName}</p>
-            )}
+            <div>
+              <Input
+                id="lastName"
+                value={formData.lastName}
+                onChange={(e) => setFormData({ lastName: e.target.value })}
+                className={errors.lastName ? "border-red-500" : ""}
+              />
+              {errors.lastName && (
+                <p className="text-sm text-red-500">{errors.lastName}</p>
+              )}
+            </div>
           </div>
         </div>
 
         <div className="space-y-2">
           <Label htmlFor="email">Email</Label>
-          <Input
-            id="email"
-            type="email"
-            value={formData.email}
-            onChange={(e) => setFormData({ email: e.target.value })}
-            error={errors.email}
-          />
-          {errors.email && (
-            <p className="text-sm text-destructive">{errors.email}</p>
-          )}
+          <div>
+            <Input
+              id="email"
+              type="email"
+              value={formData.email}
+              onChange={(e) => setFormData({ email: e.target.value })}
+              className={errors.email ? "border-red-500" : ""}
+            />
+            {errors.email && (
+              <p className="text-sm text-red-500">{errors.email}</p>
+            )}
+          </div>
         </div>
 
         <div className="space-y-2">
           <Label htmlFor="phone">Phone</Label>
-          <Input
-            id="phone"
-            type="tel"
-            value={formData.phone}
-            onChange={(e) => setFormData({ phone: e.target.value })}
-            error={errors.phone}
-          />
-          {errors.phone && (
-            <p className="text-sm text-destructive">{errors.phone}</p>
-          )}
+          <div>
+            <Input
+              id="phone"
+              type="tel"
+              value={formData.phone}
+              onChange={(e) => setFormData({ phone: e.target.value })}
+              className={errors.phone ? "border-red-500" : ""}
+            />
+            {errors.phone && (
+              <p className="text-sm text-red-500">{errors.phone}</p>
+            )}
+          </div>
         </div>
       </div>
 
